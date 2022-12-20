@@ -4,6 +4,7 @@
 
     <RouterLink v-for="(link, idx) in links" :key="idx" :to="links[idx].to" @click="$emit('toggle-open')">{{ link.title
     }} {{ link.itemsInCart }}</RouterLink>
+    <span>{{cartItems.length}}</span>
   </nav>
 </template>
 
@@ -15,6 +16,7 @@ export default {
   },
   data() {
     return {
+      cartItems: this.$store.getters.getCart,
       links: [
         {
           to: '/',
@@ -23,7 +25,6 @@ export default {
         {
           to: '/cart',
           title: 'Cart',
-          itemsInCart:this.$store.getters.getCart.length
         },
       ],
     }
