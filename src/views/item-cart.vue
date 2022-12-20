@@ -58,8 +58,6 @@ export default {
     };
   },
   created() {
-    // console.log(this._id)
-      console.log(this.$store.getters.getCart);
   },
   methods: {
     goTo() {
@@ -70,9 +68,7 @@ export default {
     items() {
       return this.$store.getters.getCart;
     },
-    //     imgSrc() {
-    //   return `src/assets/images/${this.item.title}.jpg`
-    // }
+
   },
 };
 </script>
