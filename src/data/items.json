@@ -1,44 +1,36 @@
-[
-    {
-        "id":"i101",
-        "title":"item1",
-        "price":"101",
-        "imgPath":"/images/food1.jpg"
+[{
+        "id": "i101",
+        "title": "item1",
+        "price": "101"
     },
     {
-        "id":"i102",
-        "title":"item2",
-        "price":"102",
-        "imgPath":"/images/food2.jpg"
+        "id": "i102",
+        "title": "item2",
+        "price": "102"
     },
     {
-        "id":"i103",
-        "title":"item3",
-        "price":"103",
-        "imgPath":"/images/food3.jpg"
+        "id": "i103",
+        "title": "item3",
+        "price": "103"
     },
     {
-        "id":"i104",
-        "title":"item4",
-        "price":"104",
-        "imgPath":"/images/food4.jpg"
+        "id": "i104",
+        "title": "item4",
+        "price": "104"
     },
     {
-        "id":"i105",
-        "title":"item5",
-        "price":"105",
-        "imgPath":"/images/food5.jpg"
+        "id": "i105",
+        "title": "item5",
+        "price": "105"
     },
     {
-        "id":"i106",
-        "title":"item6",
-        "price":"106",
-        "imgPath":"/images/food6.jpg"
+        "id": "i106",
+        "title": "item6",
+        "price": "106"
     },
     {
-        "id":"i107",
-        "title":"item7",
-        "price":"107",
-        "imgPath":"/images/food7.jpg"
+        "id": "i107",
+        "title": "item7",
+        "price": "107"
     }
 ]
