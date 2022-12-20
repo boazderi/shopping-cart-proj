@@ -2,8 +2,10 @@
   <section class="item-list">
     <item-preview v-for="item in pagedItems" :key="item._id" :item="item" />
   </section>
-  <button @click="prevPage" :disabled="page === 1">Prev</button>
-  <button @click="nextPage" :disabled="page === numPages">Next</button>
+  <div class="flex pager-btns">
+    <button @click="prevPage" :disabled="page === 1">Prev</button>
+    <button @click="nextPage" :disabled="page === numPages">Next</button>
+  </div>
 </template>
 
 <script>

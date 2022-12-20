@@ -1,4 +1,5 @@
 .item-list {
+  margin: 5px;
   list-style: none;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -24,4 +25,7 @@
     padding: 0.2em;
     margin: 0.2em;
   }
+}
+.pager-btns{
+  gap: 10px;
 }
