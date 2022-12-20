@@ -1,6 +1,6 @@
 <template>
   <section class="item-preview">
-    <img :src="item.url" />
+    <img :src="imgSrc" />
     <h3>{{ item.title }}</h3>
     <p>Price: {{ item.price }}</p>
     <button @click="">ADD TO CART</button>
@@ -13,9 +13,10 @@ export default {
   props: {
     item: Object,
   },
+  computed: {
+    imgSrc() {
+      return `../assets/images/${this.item.title}.jpg`
+    }
+  }
 }
 </script>
-
-<style>
-
-</style>
