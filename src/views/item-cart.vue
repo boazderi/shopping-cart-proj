@@ -5,10 +5,9 @@
       <div class="item-cart-title">{{ item.title }}</div>
       <div>Price: {{'$' + item.price}} </div>
       <div class="cart-img-container">
-        <img :src="item.imgPath" width="30" alt="" />
+        <img :src="`src/assets/images/${item.title}.jpg`" width="30" alt="" />
       </div>
     </div>
-    <pre> {{ items }} </pre>
     <button @click="goTo()">Go back</button>
   </section>
 </template>
@@ -60,7 +59,7 @@ export default {
   },
   created() {
     // console.log(this._id)
-      console.log(this.$store.getters.getItems);
+      console.log(this.$store.getters.getCart);
   },
   methods: {
     goTo() {
@@ -69,8 +68,11 @@ export default {
   },
   computed: {
     items() {
-      return this.$store.getters.getItems;
+      return this.$store.getters.getCart;
     },
+    //     imgSrc() {
+    //   return `src/assets/images/${this.item.title}.jpg`
+    // }
   },
 };
 </script>
