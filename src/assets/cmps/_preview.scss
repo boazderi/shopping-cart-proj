@@ -1,6 +1,7 @@
 .item-preview {
     img {
-        width: 50px;
+        width: 200px;
+        aspect-ratio: 1/1;
         object-fit: cover;
     }
 }
