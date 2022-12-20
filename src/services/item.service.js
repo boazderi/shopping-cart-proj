@@ -1,8 +1,8 @@
 import CRUD from './../../node_modules/crud-suit/index.js'
 // const crudService = new CRUD([data | Array], [save to LocalStorage | boolean], [name of key in LocalStorage | string], [asynchronous CRUD | boolean])
 // LINK TO DOCUMENTATION https://www.npmjs.com/package/crud-suit
-import todo from './../data/todos.json' assert { type: 'json' }
-const crudService = new CRUD(todo, true, 'todo_db', true)
+import Item from './../data/items.json' assert { type: 'json' }
+const crudService = new CRUD(Item, true, 'Item_db', true)
 window.crudService = crudService
 async function query() {
   return await crudService.query()
