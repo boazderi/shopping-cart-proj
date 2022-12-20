@@ -10,9 +10,6 @@ export const store = createStore({
     getItems(state) {
       return state.items
     },
-    getCart(state) {
-      return state.cart
-    },
  
   },
   mutations: {

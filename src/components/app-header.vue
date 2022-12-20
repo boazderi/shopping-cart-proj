@@ -1,7 +1,7 @@
 <template>
   <header class="app-header full main-container">
     <div class="header-container flex space-between align-center">
-      <h1>app header</h1>
+      <h1>Shopping Cart</h1>
       <div class="action-container">
         <button
           @click="isOpen = !isOpen"
