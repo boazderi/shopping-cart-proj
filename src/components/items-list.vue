@@ -28,7 +28,7 @@ export default {
   data() {
     return {
       page: 1,
-      pageSize: 2,
+      pageSize: 6,
     }
   },
   components: {
