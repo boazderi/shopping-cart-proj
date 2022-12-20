@@ -4,7 +4,7 @@
     <main class="main-container full">
       <RouterView />
     </main>
-    <app-footer></app-footer>
+    <!-- <app-footer></app-footer> -->
   </section>
 </template>
 

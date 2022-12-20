@@ -1,6 +1,6 @@
 <template>
   <section>
-    <app-filter></app-filter>
+    <!-- <app-filter></app-filter> -->
     <h1>app</h1>
     <items-list :items="items" />
   </section>
@@ -9,13 +9,13 @@
 
 <script>
 import itemsList from '../components/items-list.vue'
-import appFilter from './../components/app-filter.vue'
+// import appFilter from './../components/app-filter.vue'
 
 export default {
   name: 'items-app',
   components: {
     itemsList,
-    appFilter,
+    // appFilter,
   },
   created() {
     this.$store.dispatch({ type: 'loadItems' })
