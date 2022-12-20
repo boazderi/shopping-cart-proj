@@ -15,7 +15,7 @@ export default {
   },
   computed: {
     imgSrc() {
-      return `../assets/images/${this.item.title}.jpg`
+      return `src/assets/images/${this.item.title}.jpg`
     }
   }
 }
