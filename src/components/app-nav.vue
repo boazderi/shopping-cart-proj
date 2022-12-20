@@ -22,7 +22,7 @@ export default {
         },
         {
           to: '/cart',
-          title: 'Shopping Cart',
+          title: 'Cart',
         },
       ],
     }
