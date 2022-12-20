@@ -3,20 +3,22 @@ import { itemService } from '../services/item.service'
 // Create a new store instance.
 export const store = createStore({
   state: {
-    msg: 'store is connected',
-    filterBy: null,
     items: null,
+    cart:null
   },
   getters: {
     getItems(state) {
       return state.items
     },
-    getFilter(state) {
-      return state.filterBy
+    getCart(state) {
+      return state.cart
     },
-    getMsg(state) {
-      return state.msg
-    },
+    // getFilter(state) {
+    //   return state.filterBy
+    // },
+    // getMsg(state) {
+    //   return state.msg
+    // },
   },
   mutations: {
     setFilter(state, { filter }) {
