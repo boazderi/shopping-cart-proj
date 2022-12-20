@@ -3,7 +3,7 @@
     <img :src="imgSrc" />
     <h3>{{ item.title }}</h3>
     <p>Price: {{ item.price }}</p>
-    <button @click="">ADD TO CART</button>
+    <button @click="addToCart">ADD TO CART</button>
   </section>
 </template>
 
@@ -15,7 +15,12 @@ export default {
   },
   computed: {
     imgSrc() {
-      return `../assets/images/${this.item.title}.jpg`
+      return `src/assets/images/${this.item.title}.jpg`
+    }
+  },
+  methods: {
+    addToCart() {
+      this.$store.commit('addToCart', { item: this.item })
     }
   }
 }

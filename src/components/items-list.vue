@@ -12,7 +12,10 @@ import itemPreview from './item-preview.vue'
 export default {
   name: 'item-list',
   props: {
-    items: Array,
+    items: {
+      type: Array,
+      default: () => [],
+    },
     // page: {
     //   type: Number,
     //   default: 1,
@@ -22,10 +25,10 @@ export default {
     //   default: 10,
     // },
   },
-  data(){
-    return{
-      page:1,
-      pageSize:2,
+  data() {
+    return {
+      page: 1,
+      pageSize: 6,
     }
   },
   components: {
@@ -33,9 +36,11 @@ export default {
   },
   computed: {
     numPages() {
-      return Math.ceil(this.items.length / this.pageSize)
-    },
+    if (!this.items) return 1
+    return Math.ceil(this.items.length / this.pageSize)
+  },
     pagedItems() {
+      if (!this.items) return []
       const start = (this.page - 1) * this.pageSize
       return this.items.slice(start, start + this.pageSize)
     },
