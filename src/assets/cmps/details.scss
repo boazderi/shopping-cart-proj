@@ -1,11 +1,33 @@
 .item-details {
   flex-direction: column;
+  gap: 5px;
   width: 75%;
-  height: 50%;
-  background: lightskyblue;
+  height: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+  background: #ffffff;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 0 100vh #00000069;
+}
+
+.my-items-title{
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom: 1px solid #22222222;
+}
+
+.item-row{
+  gap: 10px;
+}
+
+.item-cart-title{
+  font-size: 1.2em;
+}
+
+.cart-img-container{
 }
