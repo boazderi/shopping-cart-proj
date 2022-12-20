@@ -1,10 +1,11 @@
 <template>
   <section class="item-details flex align-center justify-center">
-    <h3 class="my-items">My items</h3>
-    <div v-for="(item, idx) in items2" :key="idx" class="flex">
+    <h3 class="my-items-title">My items</h3>
+    <div v-for="(item, idx) in items2" :key="idx" class="flex item-row align-center">
       <div class="item-cart-title">{{ item.title }}</div>
+      <div>Price: {{'$' + item.price}} </div>
       <div class="cart-img-container">
-        <img :src="item.imgPath" width="40" alt="" />
+        <img :src="item.imgPath" width="30" alt="" />
       </div>
     </div>
     <pre> {{ items }} </pre>
