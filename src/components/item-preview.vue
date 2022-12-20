@@ -1,8 +1,8 @@
 <template>
   <section class="item-preview">
-    <RouterLink :to="`/item/${item._id}`">
-      {{ item.content }}
-    </RouterLink>
+    <img :src="item.url" />
+    <h3>{{ item.title }}</h3>
+    <p>Price: {{ item.price }}</p>
   </section>
 </template>
 
@@ -15,4 +15,6 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+
+</style>
