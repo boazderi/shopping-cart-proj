@@ -1,5 +1,6 @@
 <template>
   <section class="app-container main-container">
+    <user-msg/>
     <app-header></app-header>
     <main class="main-container full">
       <RouterView />
@@ -11,14 +12,16 @@
 <script>
 import appHeader from './components/app-header.vue'
 import { RouterLink, RouterView } from 'vue-router'
-import appFooter from './components/app-footer.vue'
+import  userMsg from './components/user-msg.vue'
+// import appFooter from './components/app-footer.vue'
 export default {
   name: 'app',
   components: {
     RouterLink,
     RouterView,
     appHeader,
-    appFooter,
+    userMsg
+    // appFooter,
   },
   created() {
     console.log(

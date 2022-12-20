@@ -1,5 +1,6 @@
 import { createStore } from 'vuex'
 import { itemService } from '../services/item.service'
+import {showErrorMsg, showSuccessMsg} from "../services/eventBus.service"
 
 export const store = createStore({
     state: {
@@ -24,6 +25,7 @@ export const store = createStore({
         },
         addToCart(state, { item }) {
             state.cart.push(item)
+            showSuccessMsg('Item added')
         },
         removeFromCart(state, { itemId }) {
             const idx = state.cart.findIndex(i => i.id === itemId)
