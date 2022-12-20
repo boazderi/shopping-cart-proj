@@ -2,7 +2,6 @@
     <section class="item-details flex align-center justify-center">
         <h3>My items</h3>
         <div
-
         v-for="(item, idx) in items" :key="idx"
         >
             <div class="item-cart-title"> {{item.title}} </div>
@@ -16,8 +15,13 @@
 <script>
 export default {
     name: 'item-details',
+    data() {
+        return {
+            item: 0
+        }
+    },
     created() {
-        console.log(this._id)
+        // console.log(this._id)
     },
     methods: {
         goTo() {
@@ -26,6 +30,7 @@ export default {
     },
     computed:{
         items(){
+            console.log(this.$store.getters.getItems);
             return this.$store.getters.getItems
         }
     },
