@@ -1,22 +1,19 @@
 import { createStore } from 'vuex'
 import { itemService } from '../services/item.service'
-// Create a new store instance.
+
 export const store = createStore({
   state: {
-    msg: 'store is connected',
-    filterBy: null,
     items: null,
+    cart: null
   },
   getters: {
     getItems(state) {
       return state.items
     },
-    getFilter(state) {
-      return state.filterBy
+    getCart(state) {
+      return state.cart
     },
-    getMsg(state) {
-      return state.msg
-    },
+ 
   },
   mutations: {
     setFilter(state, { filter }) {
@@ -25,6 +22,13 @@ export const store = createStore({
     setItems(state, { items }) {
       state.items = items
     },
+    addToCart(state, { item }) {
+      state.cart.push(item)
+    },
+    removeFromCart(state, { itemId }) {
+      const idx = state.cart.findIndex(i => i.id === itemId)
+      state.cart.splice(idx, 1)
+    }
   },
   actions: {
     async loadItems({ commit }) {
@@ -32,6 +36,9 @@ export const store = createStore({
       console.log('items:', items)
       commit({ type: 'setItems', items })
     },
+
   },
-  modules: {},
+  modules: {
+
+  },
 })
