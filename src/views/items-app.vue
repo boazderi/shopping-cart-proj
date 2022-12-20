@@ -1,7 +1,7 @@
 <template>
   <section>
     <!-- <app-filter></app-filter> -->
-    <h1>app</h1>
+    <!-- <h1>app</h1> -->
     <items-list :items="items" />
   </section>
   <RouterView />
