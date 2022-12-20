@@ -1,7 +1,14 @@
 <template>
     <section class="item-details flex align-center justify-center">
         <h3>My items</h3>
-        
+        <div
+
+        v-for="(item, idx) in items" :key="idx"
+        >
+            <div class="item-cart-title"> {{item.title}} </div>
+            <div class="cart-img-container"> <img :src="item.imgPath" width="40" alt=""> </div>
+        </div>
+            <pre> {{items}} </pre>
         <button @click="goTo()">Go back</button>
     </section>
 </template>
@@ -9,9 +16,6 @@
 <script>
 export default {
     name: 'item-details',
-    props: {
-        _id: String,
-    },
     created() {
         console.log(this._id)
     },
@@ -20,10 +24,10 @@ export default {
             this.$router.back()
         },
     },
+    computed:{
+        items(){
+            return this.$store.getters.getItems
+        }
+    },
 }
 </script>
-  
-<style>
-
-</style>
-  
